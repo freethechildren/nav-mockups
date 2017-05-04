@@ -532,12 +532,12 @@ Author's custom styles
   }
   .we-accordion-header-active .fa-chevron-right {
     transform: rotate(90deg);
-    transform-origin: 0.5rem 1.5rem;
+    transform-origin: 0.3rem 2rem;
   }
   .fa-chevron-right {
     transform: unset;
     float: right;
-    padding-top: .6rem;
+    padding-top: 1.6rem;
     padding-right: 4rem;
   }
   .we-accordion-header-active + .we-accordion-open {
@@ -574,6 +574,7 @@ Author's custom styles
   .we-accordion-nav .we-accordion-header {
     margin: 0;
     width: 100%;
+    line-height: 4rem;
   }
   /*TEMP*/
   we-accordion-header:active, a:active {
