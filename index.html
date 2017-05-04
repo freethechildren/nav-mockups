@@ -6,10 +6,8 @@
   <title>WE.org</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <!-- Place favicon.ico in the root directory -->
-
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <script src="js/vendor/modernizr-2.8.3.min.js"></script>
@@ -21,37 +19,43 @@
 
   <!-- Add your site or application content here -->
   <div class="we-navbar">
-    <div class="we-container">
       <div class="we-nav we-super-nav is-centered">
-        <a href="#" class="super-nav-item active">Shop</a>
-        <a href="#" class="super-nav-item">Track Your Impact</a>
-        <a href="#" class="super-nav-item">Trips</a>
-        <a href="#" class="super-nav-item">Donate</a>
-        <span class="we-social">
-          <a href="#">Social</a>
-        </span>
-        <span class="we-language">
-          <a href="#">Language</a>
-        </span>
+        <div class="we-container">
+          <div class="we-nav we-super-left">
+            <a href="#" class="super-nav-item active">Shop</a>
+            <a href="#" class="super-nav-item">Track Your Impact</a>
+            <a href="#" class="super-nav-item">Trips</a>
+            <a href="#" class="super-nav-item">Donate</a>
+          </div>
+          <div class="we-nav we-super-right">
+            <span class="we-nav we-social">
+              <a href="#">Social</a>
+            </span>
+            <span class="we-nav we-language">
+              <a href="#">EN  |  FR</a>
+            </span>
+          </div>
+        </div>
       </div>
       <div class="we-nav we-site-nav is-centered">
-        <div class="we-nav we-nav-left">
-          <span class="we-logo-container">
-            <img src="https://cdn.we.org/wp-content/uploads/2016/07/WE-logo-white.png">
-          </span>
-        </div>
-        <div class="we-nav we-nav-right">
-          <a href="#">WE Movement</a>
-          <a href="#">WE Schools</a>
-          <a href="#">WE Families</a>
-          <a href="#">WE Companies</a>
-          <a href="#">WE for Me</a>
-          <a href="#">WE Villages</a>
-          <a href="#">WE Day</a>
+        <div class="we-container">
+          <div class="we-nav we-nav-left">
+            <span class="we-logo-container">
+              <img src="https://cdn.we.org/wp-content/uploads/2016/07/WE-logo-white.png">
+            </span>
+          </div>
+          <div class="we-nav we-nav-right">
+            <a href="#" class="active">WE Movement</a>
+            <a href="#">WE Schools</a>
+            <a href="#">WE Families</a>
+            <a href="#">WE Companies</a>
+            <a href="#">WE for Me</a>
+            <a href="#">WE Villages</a>
+            <a href="#">WE Day</a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
   <div class="we-mobile-navbar fixed">
     <div class="we-mobile-container">
@@ -69,7 +73,7 @@
 
   <div class="we-accordion-nav hidden alt-menus">
     <div class="we-mobile-menu-container">
-      <h2>WE Movement</h2>
+      <h2>WE Movement<span class="fa fa-chevron-right"></span></h2>
       <div>
         <ul>
           <li class="we-mobile-nav-item"><a href="#">Our Beliefs</a></li>
@@ -80,7 +84,7 @@
           <li class="we-mobile-nav-item"><a href="#">About ME to WE</a></li>
         </ul>
       </div>
-      <h2>WE Schools</h2>
+      <h2>WE Schools<span class="fa fa-chevron-right"></span></h2>
       <div>
         <ul>
           <li class="we-mobile-nav-item"><a href="#">WE at School</a></li>
@@ -93,7 +97,7 @@
           <li class="we-mobile-nav-item"><a href="#">Indigenous Programming</a></li>
         </ul>
       </div>
-      <h2>WE Families</h2>
+      <h2>WE Families<span class="fa fa-chevron-right"></span></h2>
       <div>
         <ul>
           <li class="we-mobile-nav-item"><a href="#">WE at Home</a></li>
@@ -103,7 +107,7 @@
           <li class="we-mobile-nav-item"><a href="#">WE Families awards</a></li>
         </ul>
       </div>
-      <h2>WE Companies</h2>
+      <h2>WE Companies<span class="fa fa-chevron-right"></span></h2>
       <div>
         <ul>
           <li class="we-mobile-nav-item"><a href="#">WE at Work</a></li>
@@ -111,7 +115,7 @@
           <li class="we-mobile-nav-item"><a href="#">Corporate Service Trips</a></li>
         </ul>
       </div>
-      <h2>WE for Me</h2>
+      <h2>WE for Me<span class="fa fa-chevron-right"></span></h2>
       <div>
         <ul>
           <li class="we-mobile-nav-item"><a href="#">WE for Me</a></li>
@@ -119,7 +123,7 @@
           <li class="we-mobile-nav-item"><a href="#">Travel with Purpose</a></li>
         </ul>
       </div>
-      <h2>WE Villages</h2>
+      <h2>WE Villages<span class="fa fa-chevron-right"></span></h2>
       <div>
         <ul>
           <li class="we-mobile-nav-item"><a href="#">Our Development Model</a></li>
@@ -127,7 +131,7 @@
           <li class="we-mobile-nav-item"><a href="#">Donate to WE Charity</a></li>
         </ul>
       </div>
-      <h2>WE Day</h2>
+      <h2>WE Day<span class="fa fa-chevron-right"></span></h2>
       <div>
         <ul>
           <li class="we-mobile-nav-item"><a href="#">What is WE Day?</a></li>
@@ -159,7 +163,7 @@
           <li class="we-mobile-nav-item"><a href="#">WE Charity</a></li>
         </div>
         <div class="we-accordion-nav-footer is-centered">
-          <span>Item1</span><span>Item2</span><span>Item3</span><span>Item4</span>
+          <span class="fa fa-2x fa-twitter"></span><span class="fa fa-2x fa-facebook"></span><span class="fa fa-2x fa-instagram"></span><span class="fa fa-2x fa-youtube-play"></span>
         </div>
       </div>
     </div>
@@ -191,6 +195,9 @@
       <span class="we-mobile-nav-item" data-sub="subnav-7">
         <a href="#">WE Day</a>
       </span>
+      <div class="we-mobile-nav-item we-mobile-nav-social">
+        <span class="fa fa-2x fa-twitter"></span><span class="fa fa-2x fa-facebook"></span><span class="fa fa-2x fa-instagram"></span><span class="fa fa-2x fa-youtube-play"></span>
+      </div>
     </div>
   </div>
   <div class="we-mobile-subnav" id="subnav-0">
@@ -205,21 +212,23 @@
           </div>
         </div>
       </div>
-      <span class="we-mobile-nav-item">
-        <a href="#">WE.org</a>
-      </span>
-      <span class="we-mobile-nav-item">
-        <a href="#">Shop</a>
-      </span>
-      <span class="we-mobile-nav-item">
-        <a href="#">Track Your Impact</a>
-      </span>
-      <span class="we-mobile-nav-item">
-        <a href="#">ME to WE</a>
-      </span>
-      <span class="we-mobile-nav-item">
-        <a href="#">WE Charity</a>
-      </span>
+      <div class="we-mobile-link-wrapper">
+        <span class="we-mobile-nav-item">
+          <a href="#">WE.org</a>
+        </span>
+        <span class="we-mobile-nav-item">
+          <a href="#">Shop</a>
+        </span>
+        <span class="we-mobile-nav-item">
+          <a href="#">Track Your Impact</a>
+        </span>
+        <span class="we-mobile-nav-item">
+          <a href="#">ME to WE</a>
+        </span>
+        <span class="we-mobile-nav-item">
+          <a href="#">WE Charity</a>
+        </span>
+      </div>
     </div>
   </div>
 
@@ -235,24 +244,26 @@
           </div>
         </div>
       </div>
-      <span class="we-mobile-nav-item">
-        <a href="#">Our Beliefs</a>
-      </span>
-      <span class="we-mobile-nav-item">
-        <a href="#">Our Founders</a>
-      </span>
-      <span class="we-mobile-nav-item">
-        <a href="#">WE Day Broadcast</a>
-      </span>
-      <span class="we-mobile-nav-item">
-        <a href="#">Join the Movement</a>
-      </span>
-      <span class="we-mobile-nav-item">
-        <a href="#">About WE Charity</a>
-      </span>
-      <span class="we-mobile-nav-item">
-        <a href="#">ME to WE</a>
-      </span>
+      <div class="we-mobile-link-wrapper">
+        <span class="we-mobile-nav-item">
+          <a href="#">Our Beliefs</a>
+        </span>
+        <span class="we-mobile-nav-item">
+          <a href="#">Our Founders</a>
+        </span>
+        <span class="we-mobile-nav-item">
+          <a href="#">WE Day Broadcast</a>
+        </span>
+        <span class="we-mobile-nav-item">
+          <a href="#">Join the Movement</a>
+        </span>
+        <span class="we-mobile-nav-item">
+          <a href="#">About WE Charity</a>
+        </span>
+        <span class="we-mobile-nav-item">
+          <a href="#">ME to WE</a>
+        </span>
+      </div>
     </div>
   </div>
 

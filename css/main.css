@@ -102,7 +102,8 @@ Author's custom styles
 ========================================================================== */
 /* Variables */
 :root {
-  --primary-color: blue;
+  --primary-grey: #555555;
+  --primary-blue: #00a9e7;
 }
 /*modifier classes*/
 .is-centered {
@@ -139,23 +140,28 @@ Author's custom styles
 }
 .we-nav a:hover {
   text-decoration: underline;
+  color: var(--primary-blue);
+  font-weight: 600;
 }
 .we-container {
-  justify-content: center;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  flex-direction: row;
   margin: 0 auto;
-  max-width: 80vw;
+  width: 100%;
+  max-width: 1060px;
 }
 .we-navbar {
   margin: 0;
-  background-color: aquamarine;
-  border-bottom: 1em solid powderblue;
+  border-bottom: 1em solid var(--primary-blue);
 }
 .we-super-nav {
-  background-color: darkcyan;
+  background-color: var(--primary-grey);
   justify-content: center;
   align-items: center;
-  width: 100%;
-  max-width: 80vw;
+  width: 100vw;
+  /*max-width: 80vw;*/
   height: 2em;
 }
 .we-super-nav a {
@@ -165,19 +171,25 @@ Author's custom styles
   height: 100%;
   vertical-align: bottom;
 }
+.we-super-right {
+  justify-content: flex-end;
+}
+.we-super-left {
+  justify-content: flex-start;
+}
 .super-nav-item.active{
   height: 100%;
   box-shadow: inset 0 .35em 0 white;
 
 }
 .we-site-nav {
-  background-color: cornflowerblue;
   justify-content: space-between;
   align-items: baseline;
-  /*padding-bottom: 1em;*/
+}
+.we-site-nav a {
+  color: var(--primary-grey);
 }
 .we-nav-left {
-  background-color: deepskyblue;
 }
 .we-nav-left .we-logo-container {
   margin: 0 auto;
@@ -188,7 +200,13 @@ Author's custom styles
   max-width: auto;
 }
 .we-nav-right {
-  background-color: dodgerblue;
+  display: flex;
+  align-self: center;
+  padding-top: 1.8rem;
+}
+.we-nav-right .active {
+  color: var(--primary-blue);
+
 }
 .we-nav-right a {
   height: 100%;
@@ -208,7 +226,7 @@ Author's custom styles
   xxmargin: 0px auto; /* <-- eliminate, use above margin */
   border-left: 1em solid transparent;
   border-right: 1em solid transparent;
-  border-bottom: 1em solid powderblue; /* <-- change to bottom for up arrow */
+  border-bottom: 1em solid var(--primary-blue); /* <-- change to bottom for up arrow */
 }
 
 /* Media Queries */
@@ -217,6 +235,7 @@ Author's custom styles
   .we-navbar {
     visibility: hidden;
     display: none;
+    margin: 0;
   }
   .we-mobile-language-toggle {
     color: white;
@@ -236,7 +255,7 @@ Author's custom styles
     align-self: center;
     justify-content: center;
     top: 0;
-    background-color: aquamarine;
+    background-color: var(--primary-grey);
   }
   .we-mobile-container {
     width: 90vw;
@@ -295,7 +314,7 @@ Author's custom styles
     overflow: hidden;
     top: 6em;
     width: 100vw;
-    background-color: powderblue;
+    background-color: white;
     justify-content: center;
     transition: all .2s ease-in-out;
   }
@@ -312,7 +331,7 @@ Author's custom styles
     font-size: 1.25em;
     flex-flow: column wrap;
     text-decoration: none;
-    color: white;
+    color: var(--primary-grey);
     height: 100%;
     width: 100%;
     line-height: calc((100vh - 6em) / 8);
@@ -322,11 +341,15 @@ Author's custom styles
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc((100vh - 6em) / 8); /*Divided by number of menu items.*/
+    height: calc((100vh - 6em) / 9); /*Divided by number of menu items.*/
+  }
+  .we-mobile-nav-item.we-mobile-nav-social {
+    justify-content: space-around;
+    background-color: var(--primary-grey);
+    color: white;
   }
   .we-mobile-nav-item a {
     text-decoration: none;
-    color: white;
   }
   .we-mobile-menu a:hover {
     text-decoration: underline;
@@ -339,7 +362,7 @@ Author's custom styles
     right: 0;
     width: 0;
     height: 100vh;
-    background-color: darkcyan;
+    background-color: white;
     transition: all .25s ease-in-out;
   }
   .we-mobile-subnav .we-mobile-container {
@@ -347,7 +370,7 @@ Author's custom styles
     padding: 0 2em;
   }
   .we-mobile-subnav.active .we-mobile-subnav-top .we-mobile-subnav-container {
-    line-height: 5em;
+    line-height: 4em;
   }
   .we-mobile-subnav-container {
     width: 100vw;
@@ -357,28 +380,42 @@ Author's custom styles
     margin: 0 auto;
   }
   .we-mobile-super-nav {
-    background-color: slategrey;
+    background-color: white;
     font-size: 1.5rem;
+  }
+  .we-mobile-super-nav a {
+    color: var(--primary-grey);
   }
   .we-mobile-subnav-top {
     display: flex;
-    height: 6em;
+    height: 6rem;
     width: 100vw;
     align-self: center;
     align-items: center;
-    background-color: cornflowerblue;
+    background-color: var(--primary-grey);
     text-align: center;
+  }
+  .we-mobile-link-wrapper {
+    position: fixed;
+    top: 5em;
+    height: calc(100vh - 6em);
+    justify-content: space-around;
+    display: flex;
+    flex-flow: column nowrap;
   }
   .we-mobile-subnav-back {
     height: 100%;
+    display: flex;
+    width: 30vw;
+    justify-content: center;
   }
   .we-mobile-subnav-active-section {
     font-size: 1.5em;
-  }
-  .we-mobile-subnav-active-section {
     align-self: center;
+    display: flex;
+    justify-content: center;
+    width: 70vw;
   }
-
   .we-mobile-subnav.active {
     z-index: 4;
     overflow: hidden;
@@ -391,6 +428,9 @@ Author's custom styles
   }
   .we-mobile-subnav-container a {
     text-decoration: none;
+    color: var(--primary-grey);
+    width: 100%;
+    text-align: center;
     line-height: calc(100vh / 9);
   }
   .we-mobile-subnav.active .we-mobile-subnav-container{
@@ -404,7 +444,7 @@ Author's custom styles
     width: 100%;
     line-height: calc(100vh / 9);
   }
-  /*.we-mobile-subnav.active .we-mobile-subnav-container  > .toggle:first {
+  /*.we-mobile-subnav.active .we-mobile-subnav-container  > .we-accordion-header:first {
     padding-top: 1em;
   }*/
   .we-accordion-nav {
@@ -414,7 +454,7 @@ Author's custom styles
     flex-flow: column wrap;
     width: 100vw;
     height: 0;
-    background-color: tomato;
+    background-color: white;
     overflow: hidden;
     transition: all .2s ease-in-out;
   }
@@ -425,9 +465,16 @@ Author's custom styles
     height: 100%;
     width: 100%;
     display: block;
+    color: var(--primary-grey);
   }
   .we-accordion-super-nav-container {
-    background-color: slategrey;
+    background-color: var(--primary-grey);
+  }
+  .we-accordion-super-nav-container li.we-mobile-nav-item a {
+    color: white;
+  }
+  .we-accordion-super-nav, .we-accordion-nav-footer {
+    height: auto !important;
   }
   .we-accordion-super-nav {
     padding-left: 2em;
@@ -441,8 +488,10 @@ Author's custom styles
   }
   .we-accordion-nav.active .we-accordion-nav-footer {
     min-height: 4em;
-    background-color: lightcoral;
+    background-color: var(--primary-grey);
     justify-content: space-around;
+    border-top: 2px solid white;
+    color: white;
     display: flex;
     width: 100vw;
     flex-direction: row;
@@ -456,15 +505,42 @@ Author's custom styles
     overflow-x: hidden;
     overflow-y: scroll;
   }
-  .toggle, .toggle + div {
+  .we-accordion-header, .we-accordion-header + .we-accordion-open {
     padding-left: 2rem;
+    color: var(--primary-grey);
+    transition: all .2s ease-in-out;
+    box-shadow: inset 0 -.1em 0 var(--primary-grey);
   }
-  .we-accordion-nav div {
+  .we-accordion-open:last-child, .we-accordion-closed:last-child, .we-accordion-header + .we-accordion-open:last-child {
+    box-shadow: none;
+  }
+  .we-accordion-header > *, .we-accordion-header-active > * {
+    transition: all .2s ease-in-out;
+  }
+  .we-accordion-header-active .fa-chevron-right {
+    transform: rotate(90deg);
+  }
+  .fa-chevron-right {
+    transform: unset;
+    float: right;
+    padding-top: .6rem;
+    padding-right: 4rem;
+  }
+  .we-accordion-header-active + .we-accordion-open {
+    height: 100%;
+    background-color: lightgrey;
+  }
+  .we-accordion-nav .we-accordion-open {
+    transition: all .2s ease-in-out;
     width: 100vw;
     display: block;
+    height: 100%;
+    line-height: 2.6rem;
   }
-  .we-accordion-nav .closed {
-    display: none;
+  .we-accordion-nav .we-accordion-closed {
+    height: 0;
+    overflow: hidden;
+    transition: all .2s ease-in-out;
   }
   .we-accordion-nav a {
     text-decoration: none;
@@ -475,16 +551,18 @@ Author's custom styles
     list-style: none;
     -webkit-padding-start: 0;
   }
-  .we-accordion-nav li, .toggle {
+  .we-accordion-nav li, .we-accordion-header {
     display: block;
     width: 100vw;
+    line-height: 1.8em;
   }
 
-  .we-accordion-nav h2 {
+  .we-accordion-nav .we-accordion-header {
     margin: 0;
+    width: 100%;
   }
   /*TEMP*/
-  toggle:active, a:active {
+  we-accordion-header:active, a:active {
     background-color: gold;
   }
 }
