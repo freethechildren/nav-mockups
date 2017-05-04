@@ -512,6 +512,9 @@ Author's custom styles
     overflow-x: hidden;
     overflow-y: scroll;
   }
+  .we-accordion {
+    transition: all .2s ease-in-out;
+  }
   .we-accordion-header, .we-accordion-header + .we-accordion-open {
     padding-left: 2rem;
     color: var(--primary-grey);

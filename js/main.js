@@ -84,17 +84,17 @@ var accordionSize = accordionH2El.length;
 for (i = 0; i < accordionSize; i++) {
   var h2Node = accordionH2El[i];
   h2Node.setAttribute("class", "we-accordion-header");
-  h2Node.nextElementSibling.setAttribute("class", "we-accordion-closed");
+  h2Node.nextElementSibling.setAttribute("class", "we-accordion we-accordion-closed");
   h2Node.onclick = function() {
     var h2 = this;
     if (h2.getAttribute("class") == "we-accordion-header") {
       closeAllTabs();
       h2.classList.add("we-accordion-header-active");
-      h2.nextElementSibling.setAttribute("class", "we-accordion-open");
+      h2.nextElementSibling.setAttribute("class", "we-accordion we-accordion-open");
     }else{
       closeAllTabs();
       h2.setAttribute("class", "we-accordion-header");
-      h2.nextElementSibling.setAttribute("class", "we-accordion-closed");
+      h2.nextElementSibling.setAttribute("class", "we-accordion we-accordion-closed");
     }
   }
 }
