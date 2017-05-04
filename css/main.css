@@ -258,7 +258,7 @@ Author's custom styles
     align-self: center;
     justify-content: center;
     top: 0;
-    background-color: var(--primary-grey);
+    background-color: var(--primary-blue);
   }
   .we-mobile-container {
     width: 90vw;
@@ -395,7 +395,7 @@ Author's custom styles
     width: 100vw;
     align-self: center;
     align-items: center;
-    background-color: var(--primary-grey);
+    background-color: var(--primary-blue);
     text-align: center;
   }
   .we-mobile-link-wrapper {
@@ -434,7 +434,7 @@ Author's custom styles
     color: var(--primary-grey);
     width: 100%;
     text-align: center;
-    line-height: calc(100vh / 9);
+    line-height: calc(100vh / 6);
   }
   .we-mobile-subnav.active .we-mobile-subnav-container{
     display: flex;
