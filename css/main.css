@@ -11,8 +11,12 @@ Base styles: opinionated defaults
 ========================================================================== */
 /*Font*/
 @font-face {
-  font-family: Flama;
-  src: url("/Users/Jordan/lighthouse/lighthouse/we-nav-mockup/fonts/flama.otf");
+  font-family: flama;
+  src: url("../fonts/flama.otf");
+}
+@font-face {
+  font-family:flama-condensed;
+  src: url("../fonts/Flama Condensed/FlamaCondensed-Basic.otf");
 }
 
 html {
@@ -141,7 +145,6 @@ Author's custom styles
 .we-nav a:hover {
   text-decoration: underline;
   color: var(--primary-blue);
-  font-weight: 600;
 }
 .we-container {
   display: flex;
@@ -444,6 +447,10 @@ Author's custom styles
     width: 100%;
     line-height: calc(100vh / 9);
   }
+  .we-accordion-super-nav, .we-accordion-super-nav {
+    font-family: flama-condensed;
+    font-size: 1.4rem;
+  }
   /*.we-mobile-subnav.active .we-mobile-subnav-container  > .we-accordion-header:first {
     padding-top: 1em;
   }*/
@@ -477,7 +484,7 @@ Author's custom styles
     height: auto !important;
   }
   .we-accordion-super-nav {
-    padding-left: 2em;
+    padding-left: 2rem;
   }
   .we-accordion-super-nav.active {
     border-left: .2em solid white;
@@ -511,14 +518,21 @@ Author's custom styles
     transition: all .2s ease-in-out;
     box-shadow: inset 0 -.1em 0 var(--primary-grey);
   }
-  .we-accordion-open:last-child, .we-accordion-closed:last-child, .we-accordion-header + .we-accordion-open:last-child {
+  /*.we-mobile-menu-container .we-accordion-open:last-child,.we-mobile-menu-container .we-accordion-closed:last-child, .we-accordion-header + .we-accordion-open:last-child {
+    box-shadow: none;
+  }*/
+  .we-mobile-menu-container .we-accordion-header:last-of-type {
     box-shadow: none;
   }
   .we-accordion-header > *, .we-accordion-header-active > * {
     transition: all .2s ease-in-out;
   }
+  h2.we-accordion-header {
+    font-size: 1.2rem;
+  }
   .we-accordion-header-active .fa-chevron-right {
     transform: rotate(90deg);
+    transform-origin: 0.5rem 1.5rem;
   }
   .fa-chevron-right {
     transform: unset;
