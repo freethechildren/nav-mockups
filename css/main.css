@@ -20,7 +20,7 @@ Base styles: opinionated defaults
 }
 
 html {
-  color: #222;
+  color: var(--primary-grey);
   font-size: 1em;
   line-height: 1.4;
   font: normal 1em flama, Verdana, Arial, sans-serif;
@@ -511,6 +511,9 @@ Author's custom styles
     justify-content: space-between;
     overflow-x: hidden;
     overflow-y: scroll;
+  }
+  a:hover, .we-mobile-nav-item a:hover, .we-mobile-nav-item:hover, .we-accordion-header:hover {
+    text-decoration: underline;
   }
   .we-accordion {
     transition: all .2s ease-in-out;
