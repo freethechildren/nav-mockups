@@ -519,6 +519,11 @@ Author's custom styles
   .we-accordion {
     transition: all .2s ease-in-out;
   }
+  .we-accordion-language-toggle {
+    width: 100vw;
+    font-size: 1.5rem;
+    border-bottom: 2px solid black;
+  }
   .we-accordion-header, .we-accordion-header + .we-accordion-open {
     padding-left: 2rem;
     color: var(--primary-grey);
