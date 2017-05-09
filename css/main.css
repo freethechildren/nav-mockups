@@ -258,7 +258,7 @@ Author's custom styles
     align-self: center;
     justify-content: center;
     top: 0;
-    background-color: var(--primary-blue);
+    background-color: var(--primary-grey);
   }
   .we-mobile-container {
     width: 90vw;
@@ -471,7 +471,8 @@ Author's custom styles
   li.we-mobile-nav-item a {
     height: 100%;
     width: 100%;
-    display: block;
+    display: flex;
+    align-items: center;
     color: var(--primary-grey);
   }
   .we-accordion-super-nav-container {
@@ -490,7 +491,7 @@ Author's custom styles
     border-left: .2em solid white;
   }
   .we-accordion-nav.active {
-    min-height: calc(100vh - 6em);
+    height: calc(100vh - 6em);
     transition: all .2s ease-in-out;
   }
   .we-accordion-nav.active .we-accordion-nav-footer {
