@@ -78,12 +78,11 @@ function langMenuToggle() {
 
 // Accordion Stuff
 var accordionMenu = document.querySelector(".we-accordion-nav");
-var accordionH2El = accordionMenu.getElementsByTagName("h2");
+var accordionH2El = accordionMenu.getElementsByClassName("we-accordion-header");
 var accordionSize = accordionH2El.length;
 
 for (i = 0; i < accordionSize; i++) {
   var h2Node = accordionH2El[i];
-  h2Node.setAttribute("class", "we-accordion-header");
   h2Node.nextElementSibling.setAttribute("class", "we-accordion we-accordion-closed");
   h2Node.onclick = function() {
     var h2 = this;
